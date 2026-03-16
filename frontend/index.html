@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple form · five fields</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-card">
+        <h2>✎ simple form</h2>
+        <div class="subhead">five fields · nothing exaggerated</div>
+
+        <!-- 
+            simple form – five fields:
+            1. full name (text)
+            2. email (email)
+            3. age (number)
+            4. country (select/dropdown)
+            5. message (text input, looks like a short field)
+            no complex js, only native browser behavior
+        -->
+        <form action="#" method="post" id="register-form">
+            <!-- field 1: full name -->
+            <div class="field">
+                <label for="fullname">full name <span title="required">*</span></label>
+                <input type="text" id="fullname" name="fullname" placeholder="e.g. Taylor Chen" required>
+            </div>
+
+            <!-- field 2: email address -->
+            <div class="field">
+                <label for="email">email <span title="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="hello@example.com" required>
+            </div>
+
+            <!-- field 3: age (number, simple) -->
+            <div class="field">
+                <label for="age">age <span>(optional)</span></label>
+                <input type="number" id="age" name="age" placeholder="21" min="1" max="120" step="1">
+            </div>
+
+            <!-- field 4: country (dropdown with simple options) -->
+            <div class="field">
+                <label for="country">country</label>
+                <select id="country" name="country">
+                    <option value="" selected disabled>— select —</option>
+                    <option value="jp">Japan</option>
+                    <option value="mx">Mexico</option>
+                    <option value="ng">Nigeria</option>
+                    <option value="in">India</option>
+                    <option value="fr">France</option>
+                    <option value="br">Brazil</option>
+                    <option value="other">other</option>
+                </select>
+            </div>
+
+            <!-- field 5: short message / note (text field, not textarea – keeps it compact) -->
+            <div class="field">
+                <label for="note">short note</label>
+                <input type="text" id="note" name="note" placeholder="e.g. hello from form" maxlength="100">
+            </div>
+
+            <!-- buttons: submit & reset (no js logic, just built-in) -->
+            <div class="button-group">
+                <button type="submit">✉ submit data</button>
+                <button type="reset" class="reset-hint">↻ reset</button>
+            </div>
+
+            <!-- very simple feedback line, no JS involved for normal reset/submit -->
+            <hr>
+            <div class="footnote">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                <span>five fields · html only · demo alert on submit</span>
+            </div>
+        </form>
+    </div>
+         <script src="axios.min.js"></script>
+         <script src="script.js"></script>
+</body>
+</html>
