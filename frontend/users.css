@@ -1,0 +1,194 @@
+  * {
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background: #f4f7fb;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+        .users-panel {
+            background: white;
+            max-width: 780px;
+            width: 100%;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px -8px rgba(0,10,30,0.15);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+        .panel-header {
+            padding: 1.8rem 2rem 1rem 2rem;
+            border-bottom: 1px solid #e6edf4;
+        }
+        h2 {
+            font-weight: 500;
+            font-size: 2rem;
+            margin: 0 0 0.25rem 0;
+            color: #1a2639;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h2 span {
+            background: #d9e2ef;
+            color: #1e3a6b;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.2rem 0.9rem;
+            border-radius: 40px;
+            margin-left: 0.75rem;
+        }
+        .sub-header {
+            color: #4a5f7a;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .mock-badge {
+            background: #ecf3fa;
+            border-radius: 40px;
+            padding: 0.2rem 1rem;
+            font-size: 0.8rem;
+            color: #2c4c7c;
+        }
+        .user-list {
+            padding: 0.5rem 1rem 1.5rem 1rem;
+        }
+        .user-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.2rem;
+            margin: 0.5rem 0.8rem;
+            background: #ffffff;
+            border-radius: 22px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02), 0 1px 2px rgba(0,20,40,0.03);
+            border: 1px solid #eef3f9;
+            transition: 0.1s ease;
+        }
+        .user-row:hover {
+            border-color: #cdddec;
+            background: #fbfdff;
+            box-shadow: 0 5px 12px rgba(0,35,70,0.04);
+        }
+        .user-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .user-name {
+            font-weight: 530;
+            font-size: 1.25rem;
+            color: #0e1f38;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .user-email {
+            font-size: 0.9rem;
+            color: #4e6887;
+            letter-spacing: 0.2px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .user-email::before {
+            content: "✉️";
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+        .user-role {
+            background: #e4ebf5;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            color: #1d446b;
+            font-weight: 500;
+            display: inline-block;
+            text-transform: lowercase;
+        }
+        .delete-btn {
+            background: none;
+            border: 1px solid #f1d7dc;
+            border-radius: 40px;
+            padding: 0.6rem 1.4rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #a53f4f;
+            cursor: pointer;
+            transition: 0.1s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff8f9;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .delete-btn:hover {
+            background: #feeef0;
+            border-color: #c27c89;
+            color: #891b2e;
+            box-shadow: 0 4px 8px rgba(170, 50, 60, 0.1);
+            transform: scale(1.01);
+        }
+        .delete-btn:active {
+            background: #fad7dc;
+            transform: scale(0.97);
+        }
+        .delete-btn span {
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+        .mock-footer {
+            padding: 1rem 2rem 1.8rem 2rem;
+            background: #f9fcff;
+            border-top: 1px solid #dfeaf3;
+            color: #566f8c;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .mock-stats {
+            display: flex;
+            gap: 18px;
+        }
+        .mock-stats div {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        hr {
+            border: 0;
+            border-top: 2px dotted #c8d9ea;
+            margin: 0.2rem 2rem;
+            opacity: 0.5;
+        }
+        /* tiny avatar decoration */
+        .avatar-symbol {
+            width: 32px;
+            height: 32px;
+            background: #dbe5f2;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            color: #234c7c;
+            margin-right: 8px;
+            text-transform: uppercase;
+            border: 2px solid white;
+            box-shadow: 0 2px 5px #bacde0;
+        }
+        .flex-row {
+            display: flex;
+            align-items: center;
+        }

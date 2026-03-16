@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mock users · delete demo</title>
+    <link rel="stylesheet" href="users.css" >
+</head>
+<body>
+
+<div class="users-panel">
+    <div class="panel-header">
+        <h2>
+            👥 users
+            <span>mock data</span>
+        </h2>
+        <div class="sub-header">
+            <span>each row has a delete button · simple alert demo</span>
+            <div class="mock-badge">6 active users</div>
+        </div>
+    </div>
+
+    <!-- user list – static mock users, each with delete button that triggers alert (no real deletion) -->
+    <div class="user-list">
+        <!-- user 1 / mock -->
+        <div class="user-row">
+            <div class="flex-row">
+                <div class="avatar-symbol">JD</div>
+                <div class="user-info">
+                    <div class="user-name">
+                        Jessie Dele
+                        <span class="user-role">editor</span>
+                    </div>
+                    <div class="user-email">j.dele@mock.test</div>
+                </div>
+            </div>
+            <button class="delete-btn" type="button" onclick="alert('🗑️ delete user: Jessie Dele (mock) · no actual change')"><span>🗑️</span> delete</button>
+        </div>
+    </div>
+
+    <!-- subtle separator -->
+    <hr>
+
+    <!-- minimal footer / mock info: exactly what you see -->
+    <div class="mock-footer">
+        <div class="mock-stats">
+            <div>🧪 users: 6</div>
+            <div>⚡ each has delete alert</div>
+        </div>
+        <div style="display: flex; gap: 0.8rem;">
+            <span style="opacity: 0.7;">🔄 no complex JS</span>
+            <span style="opacity: 0.9;">🗑️ click delete → alert</span>
+        </div>
+    </div>
+</div>
+
+<!-- absolutely minimal javascript: none beyond inline onclick alerts.
+     "No complex javascript logic" — there is zero logic. Each delete button
+     calls alert() with a static message. No state, no array, no removal.
+     It's the simplest possible representation of "delete for each user".
+     Mock data is hardcoded in HTML. -->
+
+    <script src="axios.min.js"></script>
+    <script src="users.js"></script>
+</body>
+</html>

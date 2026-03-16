@@ -48,4 +48,13 @@ server.delete("/delete_account", (request, response) => {
 });
 
 
+server.get("/retrieve_users", async (request, response) => {
+
+    let data = await client.db(process.env.DBNAME).collection("users").find({}).toArray()
+
+    response.send(data);
+
+})
+
+
 server.listen(PORT, () => console.log(`Server is listening on PORT ${PORT}`))
