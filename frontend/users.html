@@ -12,12 +12,13 @@
     <div class="panel-header">
         <h2>
             👥 users
-            <span>mock data</span>
+            <span><a href="/">Back to Home page</a></span>
         </h2>
         <div class="sub-header">
             <span>each row has a delete button · simple alert demo</span>
-            <div class="mock-badge">6 active users</div>
+            <div class="mock-badge"><span id="users-count-top">6</span> active users</div>
         </div>
+         <div style="margin-top: 20px;"><button style="height: 30px; background-color: red; color: white; border: none;" onClick="clearUsers()">Clear all users</button></div>
     </div>
 
     <!-- user list – static mock users, each with delete button that triggers alert (no real deletion) -->
@@ -32,7 +33,7 @@
     <!-- minimal footer / mock info: exactly what you see -->
     <div class="mock-footer">
         <div class="mock-stats">
-            <div>🧪 users: 6</div>
+            <div>🧪 users: <span id="users-count-bottom">6</span></div>
             <div>⚡ each has delete alert</div>
         </div>
         <div style="display: flex; gap: 0.8rem;">

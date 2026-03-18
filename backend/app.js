@@ -57,4 +57,16 @@ server.get("/retrieve_users", async (request, response) => {
 })
 
 
+server.delete("/clear_users", async (request, response) => {
+
+    let result = await client.db(process.env.DBNAME).collection("users").deleteMany({})
+
+    if(result){
+        response.send('Users deleted successfully');
+    }else{
+        response.send('Failed to delete users');
+    }
+})
+
+
 server.listen(PORT, () => console.log(`Server is listening on PORT ${PORT}`))

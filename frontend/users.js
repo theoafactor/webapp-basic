@@ -7,6 +7,8 @@
 
     let users = feedback.data;
 
+    document.querySelector("#users-count-top").innerHTML = users.length;
+    document.querySelector("#users-count-bottom").innerHTML = users.length;
     // users data will be placed inside user-list class
 
     // users.forEach(( user ) => {
@@ -44,3 +46,19 @@
 
 
 }())
+
+
+async function clearUsers(){
+
+    const confirmation = confirm("Are you sure you want to clear all users? ");
+
+    if(confirmation){
+
+        let feedback = await axios.delete("http://localhost:2000/clear_users");
+
+        alert(feedback.data);
+
+        location.reload();
+    }
+
+}
