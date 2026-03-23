@@ -1,3 +1,21 @@
+let fullname_field = document.getElementById("fullname");
+fullname_field.addEventListener("keyup", doSomething)
+
+
+
+function doSomething(){
+
+   console.log(fullname_field.value)
+
+   if(fullname_field.value.length > 9){
+        document.getElementById("fullname-info").innerText = "User is qualified";
+   }else{
+        document.getElementById("fullname-info").innerText = "User is NOT qualified";
+   }
+
+}
+
+
 const registerForm = document.getElementById("register-form");
 
 registerForm.addEventListener("submit", async function(event){
